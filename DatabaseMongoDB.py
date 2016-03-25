@@ -4,7 +4,11 @@ from bson.objectid import ObjectId
 import settings
 
 client = MongoClient(settings.databaseMongo)
-inputData = {"name":"new name","inkomster":[],"investeringar":[{"namn":"delinvestering","value":0,"avskrTid":5,"id":1},{"namn":"delinvestering","value":0,"avskrTid":5,"id":2},{"namn":"delinvestering","value":0,"avskrTid":5,"id":3}],"kostnader":[]}
+inputData = {"name":"new name100","inkomster":[],"investeringar":[{"namn":"delinvestering","value":0,"avskrTid":5,"id":1},{"namn":"delinvestering","value":0,"avskrTid":5,"id":2},{"namn":"delinvestering","value":0,"avskrTid":5,"id":3}],"kostnader":[]}
+inputData =  {"name":"ffff","utgifter":[{"id":0,"belopp":7,"antal":1,"beskrivning":"besk1","kategori":"kat1"}],"inkomster":[{"id":0,"belopp":7,"antal":1,"beskrivning":"besk1","kategori":"kat1","kostnad":0}],"investeringar":[{"id":0,"belopp":6000000,"antal":1,"beskrivning":"tomt","kategori":"byggnad","years":50},{"id":1,"belopp":2000000,"antal":1,"beskrivning":"hus","kategori":"byggnad","years":25},{"id":2,"belopp":10000,"antal":2,"beskrivning":"dator","kategori":"inventarier","years":2},{"id":3,"belopp":150000,"antal":1,"beskrivning":"bil","kategori":"fordon","years":5}]}
+print type(inputData)
+
+
 #db = client['mybudget']
 db = client["mybudget"]
 print db['test'].find()
